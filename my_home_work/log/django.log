@@ -6,3 +6,70 @@ INFO 2024-03-28 06:06:25,812 views  Main page accessed
 INFO 2024-03-28 06:06:25,813 basehttp  "GET / HTTP/1.1" 200 15
 INFO 2024-03-28 06:06:26,748 views  About page accessed
 INFO 2024-03-28 06:06:26,748 basehttp  "GET /about/ HTTP/1.1" 200 16
+INFO 2024-03-28 06:15:21,279 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:15:29,261 views  Main page accessed
+INFO 2024-03-28 06:15:29,262 basehttp  "GET / HTTP/1.1" 200 411
+INFO 2024-03-28 06:15:45,462 views  Main page accessed
+INFO 2024-03-28 06:15:45,462 basehttp  "GET / HTTP/1.1" 200 411
+INFO 2024-03-28 06:15:47,971 views  Main page accessed
+INFO 2024-03-28 06:15:47,972 basehttp  "GET / HTTP/1.1" 200 411
+INFO 2024-03-28 06:15:49,101 views  About page accessed
+INFO 2024-03-28 06:15:49,102 basehttp  "GET /about/ HTTP/1.1" 200 412
+INFO 2024-03-28 06:19:13,568 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:19:13,882 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:19:17,533 views  Main page accessed
+INFO 2024-03-28 06:19:17,533 basehttp  "GET / HTTP/1.1" 200 640
+INFO 2024-03-28 06:19:18,057 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:19:18,218 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:19:20,375 views  About page accessed
+INFO 2024-03-28 06:19:20,376 basehttp  "GET /about/ HTTP/1.1" 200 412
+INFO 2024-03-28 06:19:23,308 views  Main page accessed
+INFO 2024-03-28 06:19:23,309 basehttp  "GET / HTTP/1.1" 200 598
+INFO 2024-03-28 06:20:14,198 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:20:14,399 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:21:06,294 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:21:06,483 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:21:07,449 views  Main page accessed
+INFO 2024-03-28 06:21:07,451 basehttp  "GET / HTTP/1.1" 200 598
+INFO 2024-03-28 06:21:09,774 views  About page accessed
+INFO 2024-03-28 06:21:09,774 basehttp  "GET /about/ HTTP/1.1" 200 593
+INFO 2024-03-28 06:26:19,728 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:26:20,028 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:26:21,195 views  Main page accessed
+INFO 2024-03-28 06:26:21,196 basehttp  "GET / HTTP/1.1" 200 677
+INFO 2024-03-28 06:26:51,657 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:26:51,848 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:26:53,740 views  Main page accessed
+INFO 2024-03-28 06:26:53,741 basehttp  "GET / HTTP/1.1" 200 689
+INFO 2024-03-28 06:27:02,140 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:27:02,334 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:27:03,831 views  Main page accessed
+INFO 2024-03-28 06:27:03,831 basehttp  "GET / HTTP/1.1" 200 689
+INFO 2024-03-28 06:27:25,794 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:27:25,978 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:27:28,404 views  Main page accessed
+INFO 2024-03-28 06:27:28,404 basehttp  "GET / HTTP/1.1" 200 690
+INFO 2024-03-28 06:27:56,505 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:27:56,680 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:27:57,524 views  Main page accessed
+INFO 2024-03-28 06:27:57,525 basehttp  "GET / HTTP/1.1" 200 686
+INFO 2024-03-28 06:29:30,266 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:29:30,535 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:29:31,572 views  Main page accessed
+INFO 2024-03-28 06:29:31,572 basehttp  "GET / HTTP/1.1" 200 707
+INFO 2024-03-28 06:29:41,752 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:29:41,943 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:29:43,561 views  Main page accessed
+INFO 2024-03-28 06:29:43,562 basehttp  "GET / HTTP/1.1" 200 707
+INFO 2024-03-28 06:31:38,801 autoreload  /Users/denisburguto/DjangoHomeWork/my_home_work/htapp/views.py changed, reloading.
+INFO 2024-03-28 06:31:39,062 autoreload  Watching for file changes with StatReloader
+INFO 2024-03-28 06:31:40,240 views  Main page accessed
+INFO 2024-03-28 06:31:40,241 basehttp  "GET / HTTP/1.1" 200 707
+INFO 2024-03-28 06:31:42,388 views  About page accessed
+INFO 2024-03-28 06:31:42,389 basehttp  "GET /about/ HTTP/1.1" 200 706
+INFO 2024-03-28 06:31:53,114 views  Main page accessed
+INFO 2024-03-28 06:31:53,115 basehttp  "GET / HTTP/1.1" 200 707
+INFO 2024-03-28 06:31:54,191 views  About page accessed
+INFO 2024-03-28 06:31:54,191 basehttp  "GET /about/ HTTP/1.1" 200 706
+INFO 2024-03-28 06:31:57,814 views  Main page accessed
+INFO 2024-03-28 06:31:57,815 basehttp  "GET / HTTP/1.1" 200 707

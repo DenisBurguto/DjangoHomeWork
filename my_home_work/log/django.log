@@ -1,0 +1,8 @@
+INFO 2024-03-28 06:06:15,500 views  Main page accessed
+INFO 2024-03-28 06:06:15,500 basehttp  "GET / HTTP/1.1" 200 15
+INFO 2024-03-28 06:06:23,776 views  Main page accessed
+INFO 2024-03-28 06:06:23,777 basehttp  "GET / HTTP/1.1" 200 15
+INFO 2024-03-28 06:06:25,812 views  Main page accessed
+INFO 2024-03-28 06:06:25,813 basehttp  "GET / HTTP/1.1" 200 15
+INFO 2024-03-28 06:06:26,748 views  About page accessed
+INFO 2024-03-28 06:06:26,748 basehttp  "GET /about/ HTTP/1.1" 200 16

@@ -8,6 +8,10 @@ class Client(models.Model):
     address = models.TextField(default=None)
     registration_date = models.DateField(auto_now=True)
 
+    def __str__(self):
+        return (f'Client: {self.name}, email: {self.email}, phone:{self.phone}, address:{self.address},'
+                f' registration_date:{self.registration_date}')
+
 
 class Product(models.Model):
     name = models.CharField(max_length=100)
@@ -16,6 +20,10 @@ class Product(models.Model):
     quantity = models.IntegerField()
     created_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return (f'Product: {self.name}, email: {self.description}, price:{self.price}, rest_quantity:{self.quantity}, '
+                f'created_at:{self.created_at}')
+
 
 class Order(models.Model):
     customer = models.ForeignKey(Client, on_delete=models.CASCADE)
@@ -23,6 +31,7 @@ class Order(models.Model):
     total_amount = models.DecimalField(max_digits=8, decimal_places=2)
     date_ordered = models.DateTimeField(auto_now_add=True)
 
-
+    def __str__(self):
+        return f'orders_details: customer_id: {self.customer}, total_amount{self.total_amount}'
 
 # Create your models here.

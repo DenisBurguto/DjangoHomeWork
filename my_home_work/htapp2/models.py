@@ -32,6 +32,9 @@ class Order(models.Model):
     date_ordered = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'orders_details: customer_id: {self.customer}, total_amount{self.total_amount}'
+        product_names = ', '.join([product.name for product in self.products.all()])
+        return (f'Order details: Client name: {self.customer.name}, client phone: {self.customer.phone},'
+                f' goods in order: {product_names}, '
+                f'total amount: {self.total_amount}')
 
 # Create your models here.

@@ -21,7 +21,7 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return (f'Product: {self.name}, email: {self.description}, price:{self.price}, rest_quantity:{self.quantity}, '
+        return (f'Product: {self.name}, description: {self.description}, price:{self.price}, rest_quantity:{self.quantity}, '
                 f'created_at:{self.created_at}')
 
 

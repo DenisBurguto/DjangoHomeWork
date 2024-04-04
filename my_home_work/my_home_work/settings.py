@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'htapp',
     'htapp2',
+    'htapp3',
 ]
 
 MIDDLEWARE = [

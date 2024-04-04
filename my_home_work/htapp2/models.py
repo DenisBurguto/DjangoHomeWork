@@ -29,7 +29,7 @@ class Order(models.Model):
     customer = models.ForeignKey(Client, on_delete=models.CASCADE)
     products = models.ManyToManyField(Product)
     total_amount = models.DecimalField(max_digits=8, decimal_places=2)
-    date_ordered = models.DateTimeField(auto_now_add=True)
+    date_ordered = models.DateTimeField(auto_created=True) # убрать авто для фейковой генерации
 
     def __str__(self):
         product_names = ', '.join([product.name for product in self.products.all()])

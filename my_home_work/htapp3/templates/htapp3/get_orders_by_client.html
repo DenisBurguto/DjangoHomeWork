@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Get orders by client{% endblock %}
+{% block content %}
+<h3>Get Orders By Client</h3>
+    <form method="post">
+        {% csrf_token %}
+        <label for="client_id">Enter Client ID:</label>
+        <input type="text" id="client_id" name="client_id">
+        <button type="submit">Get Orders</button>
+    </form>
+{% endblock %}
+
+

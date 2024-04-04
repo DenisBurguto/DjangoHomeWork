@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block title %}All orders of {{client.name}}{% endblock %}
 {% block content %}
-{% if not period %}
-<h2>All orders of {{client.name}}</h2>
+{% if not unique %}
+<h2>All orders of {{client.name}} {% if period %} within {{period}} days {% endif %}</h2>
 {% for order in orders %}
 <div>
     <h3>Order {{ order.id }}, date: {{ order.date_ordered }}</h3>
@@ -15,7 +15,7 @@
 </div>
 {% endfor %}
 {% else %}
-<h2>List of unique products within {{period}} days:</h2>
+<h2>List of unique products {% if period %} within {{period}} days {% endif %}:</h2>
 <ul>
     {% for product in products %}
     <li>{{ product.name }} - {{ product.price }}</li>

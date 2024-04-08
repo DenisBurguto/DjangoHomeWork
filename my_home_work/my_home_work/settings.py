@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'htapp',
     'htapp2',
     'htapp3',
+    'htapp4',
 ]
 
 MIDDLEWARE = [

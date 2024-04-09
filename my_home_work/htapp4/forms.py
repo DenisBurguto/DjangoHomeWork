@@ -6,7 +6,7 @@ from htapp2.models import Product
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = ['name', 'description', 'price', 'quantity']
+        fields = ['name', 'description', 'price', 'quantity', 'photo']
 
 
 class ProductFormCreate(forms.Form):
@@ -18,3 +18,6 @@ class ProductFormCreate(forms.Form):
 
     price = forms.FloatField(widget=forms.NumberInput(attrs={'class': 'form-control'}))
     quantity = forms.IntegerField(widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    photo = forms.ImageField(required=False,widget=forms.ClearableFileInput(attrs={'class': 'form-control-file'}))
+
+

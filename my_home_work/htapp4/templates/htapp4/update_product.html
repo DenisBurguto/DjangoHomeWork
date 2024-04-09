@@ -7,7 +7,7 @@
 </div>
 {% endif %}
 <h3>Update product</h3>
-<form method="post">
+<form method="post" >
     {% csrf_token %}
     <label for="product_id">Enter Product ID:</label>
     <input type="text" id="product_id" name="product_id" required>

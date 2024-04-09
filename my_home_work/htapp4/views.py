@@ -1,9 +1,9 @@
+from django.core.files.storage import FileSystemStorage
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from htapp2.models import Product
 from htapp4.forms import ProductForm, ProductFormCreate
-
 
 
 def get_product_by_id(request, success_message=None):
@@ -16,7 +16,7 @@ def get_product_by_id(request, success_message=None):
 def product_update(request, product_id):
     product = Product.objects.get(pk=product_id)
     if request.method == 'POST':
-        form = ProductForm(request.POST, instance=product)
+        form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
             success_message = f"Product with ID {product_id} successfully updated."
@@ -35,8 +35,15 @@ def product_create(request):
             description = form.cleaned_data['description']
             price = form.cleaned_data['price']
             quantity = form.cleaned_data['quantity']
-            new_product = Product(name=name, description=description, price=price, quantity=quantity)
+            photo = request.FILES.get('photo')
+            if photo:
+                new_product = Product(name=name, description=description, price=price, quantity=quantity, photo=photo)
+            else:
+                new_product = Product(name=name, description=description, price=price, quantity=quantity)
             new_product.save()
+            # if photo:
+            #     fs = FileSystemStorage()
+            #     fs.save('product_photos/' + photo.name, photo)
             success_message = f"Product successfully created with ID {new_product.pk}."
 
     form = ProductFormCreate()
@@ -47,5 +54,6 @@ def product_create(request):
 def list_all_products(request):
     products = Product.objects.all()
     return render(request, 'htapp4/list_all_products.html', {'products': products})
+
 
 # Create your views here.

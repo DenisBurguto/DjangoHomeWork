@@ -42,4 +42,9 @@ def product_create(request):
     return render(request, 'htapp4/product_create.html',
                   {'form': form, 'success_message': success_message})
 
+
+def list_all_products(request):
+    products = Product.objects.all()
+    return render(request, 'htapp4/list_all_products.html', {'products': products})
+
 # Create your views here.

@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from htapp2.models import Product
-from htapp4.forms import ProductForm
+from htapp4.forms import ProductForm, ProductFormCreate
+
 
 
 def get_product_by_id(request, success_message=None):
@@ -28,7 +29,7 @@ def product_update(request, product_id):
 def product_create(request):
     success_message = None
     if request.method == 'POST':
-        form = ProductForm(request.POST)
+        form = ProductFormCreate(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
             description = form.cleaned_data['description']
@@ -38,7 +39,7 @@ def product_create(request):
             new_product.save()
             success_message = f"Product successfully created with ID {new_product.pk}."
 
-    form = ProductForm()
+    form = ProductFormCreate()
     return render(request, 'htapp4/product_create.html',
                   {'form': form, 'success_message': success_message})
 

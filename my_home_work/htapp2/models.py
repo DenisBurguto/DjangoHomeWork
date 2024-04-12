@@ -10,7 +10,7 @@ class Client(models.Model):
 
     def __str__(self):
         return (f'Client: {self.name}, email: {self.email}, phone:{self.phone}, address:{self.address},'
-                f' registration_date:{self.registration_date}')
+                )
 
 
 class Product(models.Model):

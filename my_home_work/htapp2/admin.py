@@ -29,8 +29,16 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['customer','total_amount', 'date_ordered']
-    ordering=['-date_ordered', '-total_amount',]
+    list_display = ['customer', 'total_amount', 'date_ordered']
+    ordering = ['-date_ordered', '-total_amount', ]
+    search_fields = ['customer', 'total_amount']
+    search_help_text = 'seach a customer or total amount'
+    readonly_fields = ['customer', 'total_amount', 'products']
+    list_filter = ['customer', 'total_amount']
+    fieldsets = [
+        ('main', {'classes': ['wide'], 'fields': ['customer', 'total_amount', 'date_ordered']}),
+        ('products', {'classes': ['collapse'], 'fields': ['products']})
+    ]
 
 
 admin.site.register(Product, ProductAdmin)

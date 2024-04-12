@@ -29,10 +29,14 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ['customer', 'total_amount', 'date_ordered']
+    @staticmethod
+    def get_customer_name(obj):
+        return obj.customer.name
+
+    list_display = ['get_customer_name', 'total_amount', 'date_ordered']
     ordering = ['-date_ordered', '-total_amount', ]
-    search_fields = ['customer', 'total_amount']
-    search_help_text = 'seach a customer or total amount'
+    search_fields = ['customer__name', 'total_amount']
+    search_help_text = 'seach a customer by name or total amount'
     readonly_fields = ['customer', 'total_amount', 'products']
     list_filter = ['customer', 'total_amount']
     fieldsets = [
@@ -41,8 +45,19 @@ class OrderAdmin(admin.ModelAdmin):
     ]
 
 
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ['name', 'email', ]
+    search_fields = ['name', 'email', 'phone', 'address']
+    search_help_text = 'name, email, phone, address'
+    readonly_fields = ['registration_date']
+    fieldsets = [
+        ('main', {'classes': ['wide'], 'fields': ['name', 'email', 'phone', 'address']}),
+        (None, {'fields': ['registration_date']})
+    ]
+
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Order, OrderAdmin)
-admin.site.register(Client)
+admin.site.register(Client, ClientAdmin)
 
 # Register your models here.

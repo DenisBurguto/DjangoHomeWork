@@ -23,4 +23,5 @@ urlpatterns = [
     path('app2/', include('htapp2.urls')),
     path('', include('htapp3.urls')),
     path('', include('htapp4.urls')),
+    path('__debug__/', include("debug_toolbar.urls")),
 ]
